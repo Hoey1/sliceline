@@ -22,7 +22,7 @@ function App() {
       <Navbar />
       <Banner />
       <Menu />
-      <div>Hello Sliceline</div>
+      <div>Sliceline 🍕</div>
     </>
   );
 }
