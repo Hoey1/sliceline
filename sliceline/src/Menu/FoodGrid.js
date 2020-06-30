@@ -16,7 +16,7 @@ export const FoodLabel = styled.div`
 `;
 
 export const Food = styled(Title)`
-  height: 200px;
+  height: 150px;
   padding: 10px;
   font-size: 20px;
   background-image: ${({ img }) => `url(${img});`};
@@ -24,10 +24,15 @@ export const Food = styled(Title)`
   background-size: cover;
   filter: contrast(75%);
   border-radius: 12px;
-  box-shadow: 0px 0px 7px 0px grey;
+  margin-top: 5px;
+  transition-property: box-shadow margin-top filter;
+  transition-duration: 250ms;
+  box-shadow: 0px 0px 2px 0px grey;
   &:hover {
     cursor: pointer;
-    opacity: 0.7;
-    transition: ease-in-out 500ms;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    box-shadow: 0px 5px 10px 0px grey;
+    filter: contrast(100%);
   }
 `;
