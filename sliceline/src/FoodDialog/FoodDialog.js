@@ -20,7 +20,7 @@ const DialogContent = styled.div`
 `;
 
 const DialogFooter = styled.div`
-  box-shadow: 0px 2px 20px 0px grey;
+  box-shadow: 0px 2px 16px 0px grey;
   height: 60px;
 `;
 
