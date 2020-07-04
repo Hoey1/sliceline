@@ -10,7 +10,7 @@ export function useQuantity(defualtQuantity) {
       setValue(1);
       return;
     }
-    setValue(e.target.value);
+    setValue(+e.target.value);
   }
 
   return {

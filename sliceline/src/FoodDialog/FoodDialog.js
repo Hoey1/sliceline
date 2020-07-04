@@ -68,6 +68,10 @@ const DialogBannerName = styled(FoodLabel)`
   padding: 5px 40px;
 `;
 
+export function getPrice(order) {
+  return (order.quantity = order.price);
+}
+
 function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
   const quantity = useQuantity(openFood && openFood.quantity);
   function close() {
@@ -78,6 +82,7 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
   const order = {
     // name: openFood.name,
     ...openFood,
+    quantity: quantity.value,
   };
 
   function addToOrder() {
@@ -97,7 +102,7 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
         </DialogContent>
         <DialogFooter>
           <ConfirmButton onClick={addToOrder}>
-            Add To Order: {formatPrice(openFood.price)}
+            Add To Order: {formatPrice(getPrice(order))}
           </ConfirmButton>
         </DialogFooter>
       </Dialog>
