@@ -85,7 +85,6 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
   if (!openFood) return null;
 
   const order = {
-    // name: openFood.name,
     ...openFood,
     quantity: quantity.value,
   };
